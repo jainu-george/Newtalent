@@ -27,7 +27,7 @@ export default class EditStore extends Component {
     this.setState({ submittedName: name, submittedAddress: address });
     this.setState({ loading: true });
 
-    const result = fetch('https://localhost:44384/Stores/PutStore/'+storeId, {
+    const result = fetch('/Stores/PutStore/'+storeId, {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -28,7 +28,7 @@ export class StoreList extends Component {
     };
 
     async componentDidMount() {
-        const result = await fetch('https://localhost:44384/Stores/GetStore');
+        const result = await fetch('/Stores/GetStore');
         const stores = await result.json();
         this.setState({ stores });
     }

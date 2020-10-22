@@ -22,7 +22,7 @@ export default class DeleteCustModal extends Component {
     this.setState({ loading: true });
     
 
-    const result = fetch('https://localhost:44384/Customers/DeleteCustomer/' + customerId, {
+    const result = fetch('/Customers/DeleteCustomer/' + customerId, {
       method: 'delete',
       headers: { 'Content-Type': 'application/json' },
       body: ''

@@ -27,7 +27,7 @@ export default class EditCustModal extends Component {
     this.setState({ submittedName: name, submittedAddress: address });
     this.setState({ loading: true });
 
-    const result = fetch('https://localhost:44384/Customers/PutCustomer/'+customerId, {
+    const result = fetch('/Customers/PutCustomer/'+customerId, {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -22,7 +22,7 @@ export default class DeleteProd extends Component {
     this.setState({ loading: true });
     
 
-    const result = fetch('https://localhost:44384/Products/DeleteProduct/' + productId, {
+    const result = fetch('/Products/DeleteProduct/' + productId, {
       method: 'delete',
       headers: { 'Content-Type': 'application/json' },
       body: ''

@@ -19,7 +19,7 @@ export default class DeleteSale extends Component {
       this.setState({ loading: true });
       
   
-      const result = fetch('https://localhost:44384/Sales/DeleteSales/'+ salesId, {
+      const result = fetch('/Sales/DeleteSales/'+ salesId, {
        
         method: 'delete',
         headers: { 'Content-Type': 'application/json' },

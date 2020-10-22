@@ -25,7 +25,7 @@ export class Sale extends Component {
   };
 
   async componentDidMount() {
-    const result = await fetch("https://localhost:44384/Sales/GetSales");
+    const result = await fetch("/Sales/GetSales");
     const sales = await result.json();
     this.setState({ sales });
   }

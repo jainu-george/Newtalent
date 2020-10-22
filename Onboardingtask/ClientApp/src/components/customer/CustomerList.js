@@ -28,7 +28,7 @@ export class CustomerList extends Component {
     };
 
     async componentDidMount() {
-        const result = await fetch('https://localhost:44384/Customers/GetCustomer');
+        const result = await fetch('/Customers/GetCustomer');
         const customers = await result.json();
         this.setState({ customers });
     }

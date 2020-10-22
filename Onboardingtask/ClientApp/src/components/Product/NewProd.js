@@ -24,7 +24,7 @@ export default class NewProd extends Component {
     
     this.setState({ loading: true })
 
-    const result = fetch('https://localhost:44384/Products/PostProduct', {
+    const result = fetch('/Products/PostProduct', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

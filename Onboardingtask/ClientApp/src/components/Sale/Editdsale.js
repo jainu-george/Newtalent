@@ -30,19 +30,19 @@ export default class EditSale extends Component {
   }
 
   async componentDidMount() {
-    const result = await fetch('https://localhost:44384/Customers/GetCustomer');
+    const result = await fetch('/Customers/GetCustomer');
     var customerSelect = await result.json();
     this.customerSelect2 = customerSelect.map((customer) => {
       return { "text": customer.name, "value": customer.customerId }
     });
 
-    const result2 = await fetch('https://localhost:44384/Products/GetProduct');
+    const result2 = await fetch('/Products/GetProduct');
     var productSelect = await result2.json();
     this.productSelect2 = productSelect.map((prod) => {
       return { "text": prod.name, "value": prod.productId }
     });
 
-    const result3 = await fetch('https://localhost:44384/Stores/GetStore');
+    const result3 = await fetch('/Stores/GetStore');
     var storeSelect = await result3.json();
     this.storeSelect2 = storeSelect.map((store) => {
       return { "text": store.name, "value": store.storeId }
@@ -58,7 +58,7 @@ export default class EditSale extends Component {
     const salesId = this.props.sale.salesId;
     this.setState({ loading: true });
 
-    const result = fetch('https://localhost:44384/Sales/PutSales/' + salesId, {
+    const result = fetch('/Sales/PutSales/' + salesId, {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

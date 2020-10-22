@@ -24,7 +24,7 @@ export default class NewCustModal extends Component {
     this.setState({ submittedName: name, submittedAddress: address })
     this.setState({ loading: true })
 
-    const result = fetch('https://localhost:44384/Customers/PostCustomer', {
+    const result = fetch('/Customers/PostCustomer', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

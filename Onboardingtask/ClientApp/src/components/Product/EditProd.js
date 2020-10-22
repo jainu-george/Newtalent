@@ -27,7 +27,7 @@ export default class EditProd extends Component {
     this.setState({ submittedName: name, submittedPrice: price });
     this.setState({ loading: true });
 
-    const result = fetch('https://localhost:44384/Products/PutProduct/'+productId, {
+    const result = fetch('/Products/PutProduct/'+productId, {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

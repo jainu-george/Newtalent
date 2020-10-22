@@ -24,7 +24,7 @@ export default class NewStore extends Component {
     this.setState({ submittedName: name, submittedAddress: address })
     this.setState({ loading: true })
 
-    const result = fetch('https://localhost:44384/Stores/PostStore', {
+    const result = fetch('/Stores/PostStore', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
